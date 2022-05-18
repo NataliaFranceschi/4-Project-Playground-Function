@@ -11,8 +11,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-
+function splitSentence(sentense) {
+let divisaoPalavra = sentense.split(" ");
+return divisaoPalavra;
 }
 
 // Desafio 4
@@ -24,7 +25,7 @@ return (arrayNomes[arrayNomes.length-1]+", "+arrayNomes[0]);
 function footballPoints(wins, ties) {
 return ((wins*3)+(ties*1));
 }
-console.log(footballPoints(14,8))
+
 // Desafio 6
 function highestCount() {
   // seu código aqui
@@ -36,16 +37,59 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumeros) {
+  let novoArray = []
+  for(numero of arrayNumeros){
+    if (numero%3 == 0 && numero%5 == 0){
+     novoArray.push("fizzBuzz")
+    } else if (numero%3 == 0){
+      novoArray.push("fizz")
+      break 
+    } else if (numero%5 == 0){
+      novoArray.push("buzz")
+    } else novoArray.push("bug!")
+  } return novoArray
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let novaString = [];
+    for(letra of string){
+    if (letra === "a"){
+      novaString.push("1") 
+    }else if (letra === "e"){
+      novaString.push("2") 
+    }else if (letra === "i"){
+      novaString.push("3") 
+    }else if (letra === "o"){
+      novaString.push("4") 
+    }else if (letra === "u") {
+      novaString.push("5") 
+    } else {
+      novaString.push(letra)
+    } 
+  }console.log(novaString.join(""))
+
 }
-function decode() {
-  // seu código aqui
+decode("h2ll4")
+function decode(string) {
+  let stringOriginal = [];
+  for(letra of string){
+  if (letra === "1"){
+    stringOriginal.push("a") 
+  }else if (letra === "2"){
+    stringOriginal.push("e") 
+  }else if (letra === "3"){
+    stringOriginal.push("i") 
+  }else if (letra === "4"){
+    stringOriginal.push("o") 
+  }else if (letra === "5") {
+    stringOriginal.push("u") 
+  } else {
+    stringOriginal.push(letra)
+  } 
+}console.log(stringOriginal.join(""))
+
 }
 
 // Desafio 10
