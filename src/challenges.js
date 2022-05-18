@@ -88,9 +88,8 @@ function encode(string) {
       novaString.push(letra)
     } 
   }console.log(novaString.join(""))
-
 }
-decode("h2ll4")
+
 function decode(string) {
   let stringOriginal = [];
   for(letra of string){
@@ -112,9 +111,20 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, nome) {
+  if (array.length == 0){
+    return "Vazio!"
+  }
+  let novoObjeto = []
+  for (tecnologias of array.sort()){
+    novoObjeto.push({
+      tech:tecnologias,
+      name: nome
+    })
+  }
+  return novoObjeto
 }
+
 
 module.exports = {
   calcArea,
