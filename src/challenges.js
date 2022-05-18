@@ -12,120 +12,117 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentense) {
-let divisaoPalavra = sentense.split(" ");
-return divisaoPalavra;
+  let divisaoPalavra = sentense.split(' ');
+  return divisaoPalavra;
 }
 
 // Desafio 4
 function concatName(arrayNomes) {
-return (arrayNomes[arrayNomes.length-1]+", "+arrayNomes[0]);
+  return (arrayNomes[arrayNomes.length - 1] + ', ' + arrayNomes[0]);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-return ((wins*3)+(ties*1));
+  return ((wins * 3) + (ties * 1));
 }
 
 // Desafio 6
 function highestCount(numeros) {
   let maiorNumero = numeros[0];
   let repeticaoMaiorNumero = 0;
-  for(numero of numeros){
-    if (numero > maiorNumero){
-      maiorNumero = numero
+  for (let numero of numeros) {
+    if (numero > maiorNumero) {
+      maiorNumero = numero;
     }
   }
-  for(numero of numeros){
-    if (maiorNumero == numero)
-    repeticaoMaiorNumero += 1
+  for (let numero of numeros) {
+    if (maiorNumero === numero) {
+      repeticaoMaiorNumero += 1;
+    }
   }
   return repeticaoMaiorNumero;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
-  return "cat1"
-  } 
-  else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)){
-return "cat2"
-  } 
-  else {
-return "os gatos trombam e o rato foge"
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return 'cat1';
+  } if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return 'cat2';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
   let novoArray = [];
-  for (let i = 0; i<arrayNumeros.length; i += 1)
-  if (arrayNumeros[i]%3 == 0 && arrayNumeros[i]%5 == 0){
-  novoArray.push("fizzBuzz")
-  } else if (arrayNumeros[i]%3 == 0){ 
-  novoArray.push("fizz")
-  } else if (arrayNumeros[i]%5 == 0){
-  novoArray.push("buzz")
-  }else {
-  novoArray.push("bug!")
+  for (let i = 0; i < arrayNumeros.length; i += 1) {
+    if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0) {
+      novoArray.push('fizzBuzz');
+    } else if (arrayNumeros[i] % 3 === 0) {
+      novoArray.push('fizz');
+    } else if (arrayNumeros[i] % 5 === 0) {
+      novoArray.push('buzz');
+    } else {
+      novoArray.push('bug!');
+    }
   }
-  return novoArray
+  return novoArray;
 }
 
 // Desafio 9
 function encode(string) {
   let novaString = [];
-    for(letra of string){
-    if (letra === "a"){
-      novaString.push("1") 
-    }else if (letra === "e"){
-      novaString.push("2") 
-    }else if (letra === "i"){
-      novaString.push("3") 
-    }else if (letra === "o"){
-      novaString.push("4") 
-    }else if (letra === "u") {
-      novaString.push("5") 
+  for (let letra of string) {
+    if (letra === 'a') {
+      novaString.push('1');
+    } else if (letra === 'e') {
+      novaString.push('2');
+    } else if (letra === 'i') {
+      novaString.push('3');
+    } else if (letra === 'o') {
+      novaString.push('4');
+    } else if (letra === 'u') {
+      novaString.push('5');
     } else {
-      novaString.push(letra)
-    } 
-  }console.log(novaString.join(""))
+      novaString.push(letra);
+    }
+  } console.log(novaString.join(''));
 }
 
 function decode(string) {
   let stringOriginal = [];
-  for(letra of string){
-  if (letra === "1"){
-    stringOriginal.push("a") 
-  }else if (letra === "2"){
-    stringOriginal.push("e") 
-  }else if (letra === "3"){
-    stringOriginal.push("i") 
-  }else if (letra === "4"){
-    stringOriginal.push("o") 
-  }else if (letra === "5") {
-    stringOriginal.push("u") 
-  } else {
-    stringOriginal.push(letra)
-  } 
-}console.log(stringOriginal.join(""))
-
+  for (let letra of string) {
+    if (letra === '1') {
+      stringOriginal.push('a');
+    } else if (letra === '2') {
+      stringOriginal.push('e');
+    } else if (letra === '3') {
+      stringOriginal.push('i');
+    } else if (letra === '4') {
+      stringOriginal.push('o');
+    } else if (letra === '5') {
+      stringOriginal.push('u');
+    } else {
+      stringOriginal.push(letra);
+    }
+  }console.log(stringOriginal.join(''));
 }
 
 // Desafio 10
 function techList(array, nome) {
-  if (array.length == 0){
-    return "Vazio!"
+  if (array.length === 0) {
+    return 'Vazio!';
   }
-  let novoObjeto = []
-  for (tecnologias of array.sort()){
+  let novoObjeto = [];
+  for (let tecnologias of array.sort()) {
     novoObjeto.push({
-      tech:tecnologias,
-      name: nome
-    })
+      tech: tecnologias,
+      name: nome,
+    });
   }
-  return novoObjeto
+  return novoObjeto;
 }
-
 
 module.exports = {
   calcArea,
