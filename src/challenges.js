@@ -27,9 +27,21 @@ return ((wins*3)+(ties*1));
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let maiorNumero = numeros[0];
+  let repeticaoMaiorNumero = 0;
+  for(numero of numeros){
+    if (numero > maiorNumero){
+      maiorNumero = numero
+    }
+  }
+  for(numero of numeros){
+    if (maiorNumero == numero)
+    repeticaoMaiorNumero += 1
+  }
+  return repeticaoMaiorNumero;
 }
+
 
 // Desafio 7
 function catAndMouse() {
