@@ -9,18 +9,16 @@ function compareTrue(valor1, valor2) {
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-console.log(calcArea(10,50))
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayNomes) {
+return (arrayNomes[arrayNomes.length-1]+", "+arrayNomes[0])
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
