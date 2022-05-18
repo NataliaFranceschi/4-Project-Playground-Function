@@ -57,17 +57,18 @@ return "os gatos trombam e o rato foge"
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
-  let novoArray = []
-  for(numero of arrayNumeros){
-    if (numero%3 == 0 && numero%5 == 0){
-     novoArray.push("fizzBuzz")
-    } else if (numero%3 == 0){
-      novoArray.push("fizz")
-      break 
-    } else if (numero%5 == 0){
-      novoArray.push("buzz")
-    } else novoArray.push("bug!")
-  } return novoArray
+  let novoArray = [];
+  for (let i = 0; i<arrayNumeros.length; i += 1)
+  if (arrayNumeros[i]%3 == 0 && arrayNumeros[i]%5 == 0){
+  novoArray.push("fizzBuzz")
+  } else if (arrayNumeros[i]%3 == 0){ 
+  novoArray.push("fizz")
+  } else if (arrayNumeros[i]%5 == 0){
+  novoArray.push("buzz")
+  }else {
+  novoArray.push("bug!")
+  }
+  return novoArray
 }
 
 // Desafio 9
