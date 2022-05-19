@@ -72,41 +72,20 @@ function fizzBuzz(arrayNumeros) {
 
 // Desafio 9
 function encode(string) {
-  let novaString = [];
-  for (let letra of string) {
-    if (letra === 'a') {
-      novaString.push('1');
-    } else if (letra === 'e') {
-      novaString.push('2');
-    } else if (letra === 'i') {
-      novaString.push('3');
-    } else if (letra === 'o') {
-      novaString.push('4');
-    } else if (letra === 'u') {
-      novaString.push('5');
-    } else {
-      novaString.push(letra);
-    }
-  } console.log(novaString.join(''));
+  let novaString = string.replaceAll('a', '1')
+    .replaceAll('e', '2')
+    .replaceAll('i', '3')
+    .replaceAll('o', '4')
+    .replaceAll('u', '5');
+  return novaString;
 }
-
-function decode(string) {
-  let stringOriginal = [];
-  for (let letra of string) {
-    if (letra === '1') {
-      stringOriginal.push('a');
-    } else if (letra === '2') {
-      stringOriginal.push('e');
-    } else if (letra === '3') {
-      stringOriginal.push('i');
-    } else if (letra === '4') {
-      stringOriginal.push('o');
-    } else if (letra === '5') {
-      stringOriginal.push('u');
-    } else {
-      stringOriginal.push(letra);
-    }
-  }console.log(stringOriginal.join(''));
+function decode(novaString) {
+  let stringOriginal = novaString.replaceAll('1', 'a')
+    .replaceAll('2', 'e')
+    .replaceAll('3', 'i')
+    .replaceAll('4', 'o')
+    .replaceAll('5', 'u');
+  return stringOriginal;
 }
 
 // Desafio 10
