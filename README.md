@@ -9,3 +9,5 @@ Projeto desenvolvido no curso da Trybe ao final do bloco 4* do Módulo 1 - Funda
  4.3 - JavaScript - Lógica de Programação e Algoritmos<br>
  4.4 - JavaScript - Objetos e funções<br>
  4.5 - Projeto - Playground Functions<br>
+
+Neste projeto todas as funções já estavam declaradas nos arquivos challenges.js e challenges2.js e era preciso desenvolver as funções conforme os requisitos dado pela instituição.
